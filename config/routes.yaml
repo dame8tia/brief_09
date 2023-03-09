@@ -3,3 +3,8 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+homepage:
+    path: /
+    controller: App\Controller\HomeController::accueil
+    #           Espace de nomm\Class::method   // Espace de nommage défini dans le ctrller
