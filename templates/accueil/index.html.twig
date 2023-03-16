@@ -5,12 +5,26 @@
 
 {% block body %}
 {% include "header.html.twig" %}
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Game_2F</h1>
+        <p class="lead text-muted">Bienvenue sur notre site Game_2F afin de vous renseigner sur les diifèrentes sorties des jeux vidéos sur les " dernières décennie</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">S'inscrire</a>
+          <a href="#" class="btn btn-secondary my-2">Se connecter</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
     <div class="container mt-5">
             <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
             {% for LastJeu in LastJeux %}
                 <div class="col">
                 <div class="card h-100 d-flex" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-                    <img src="{{ '/' ~ LastJeu.image }}" style="height: 420px;"  alt="{{ LastJeu.title }}">
+                    <img src="{{ '/' ~ LastJeu.image }}" style="height: 380px;"  alt="{{ LastJeu.title }}">
                     <div class="card-body">
                     <h5 class="card-title">{{ LastJeu.title }}</h5>
                     <p class="card-text">Note : {{ LastJeu.note }}/5</p>
