@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+      
+
+{% block body %}
+{% include "header.html.twig" %}
+    <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+            {% for LastJeu in LastJeux %}
+                <div class="col">
+                <div class="card h-100 d-flex" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                    <img src="{{ '/' ~ LastJeu.image }}" style="height: 420px;"  alt="{{ LastJeu.title }}">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ LastJeu.title }}</h5>
+                    <p class="card-text">Note : {{ LastJeu.note }}/5</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+      {% include "footer.html.twig" %}
+{% endblock %}

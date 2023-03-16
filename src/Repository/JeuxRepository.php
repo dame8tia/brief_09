@@ -39,14 +39,13 @@ class JeuxRepository extends ServiceEntityRepository
         }
     }
 
-    public function findLastJeux()
-    {
-        return $this->createQueryBuilder('n')
-            ->orderBy('n.id', 'ASC')
-            ->setMaxResults(5)
-            ->getQuery()
-            ->getResult();
-        }
+    public function findLastJeux(){
+        return $this->createQueryBuilder('j')
+        ->orderBy('j.id', 'DESC')
+        ->getQuery()
+        ->getResult();
+    }
+
 
 //    /**
 //     * @return Jeux[] Returns an array of Jeux objects
